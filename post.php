@@ -37,9 +37,9 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     // Check if query parameter is set to search posts
     if (isset($_GET['query']) && !empty($_GET['query'])) {
         $query = mysqli_real_escape_string($conn, $_GET['query']);
-        $sql = "SELECT posts.*, categories.name AS category_name FROM posts
-                LEFT JOIN categories ON posts.category_id = categories.id
-                WHERE posts.title LIKE '%$query%' OR posts.body LIKE '%$query%'";
+        $sql = "SELECT post.*, categories.name AS category_name FROM post
+                LEFT JOIN categories ON post.category_id = categories.id
+                WHERE post.title LIKE '%$query%' OR post.body LIKE '%$query%'";
         $result = mysqli_query($conn, $sql);
 
         if ($result) {
@@ -78,7 +78,6 @@ mysqli_close($conn);
 </head>
 <body>
     <?php require('inc/navbar.php'); ?>
-
     <div class="container-fluid" style="background-color:burlywood; padding:20px; height:100vh">
         <div class="container">
             <?php if ($post): ?>
@@ -123,7 +122,7 @@ mysqli_close($conn);
                 </div>
             <?php else: ?>
                 <!-- Posts List and Search Results -->
-                <h1 class="text-center"><?php echo isset($_GET['query']) ? 'Search Results' : 'Posts'; ?></h1>
+                <h1 class="text-center"><?php echo isset($_GET['query']) ? 'Search Results' : 'Bon Appétit Blog'; ?></h1>
                 <hr>
                 <?php if (count($posts) > 0): ?>
                     <?php foreach ($posts as $post): ?>
