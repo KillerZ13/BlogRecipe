@@ -39,10 +39,18 @@ $categories = mysqli_fetch_all($categories_result, MYSQLI_ASSOC);
 <head>
     <title>Php Blog</title>
     <?php require('inc/header.php'); ?>
+    <style>
+        .navbar .user {
+            color: #9A6735;
+        }
+        .jumbotron.bg-dark {
+            background-color: #9A6735 !important;
+        }
+    </style>
 </head>
 <body>
     <?php require('inc/navbar.php'); ?>
-    <div class="container-fluid" style="background-color:burlywood; padding:20px; height:100vh;">
+    <div class="container-fluid" style="background-color:#C1E899; padding:20px; height:100vh;">
         <div class="jumbotron bg-dark" style="max-width:450px; padding:20px 20px; color:ghostwhite; margin: auto;">
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
                 <h1 class="text-center">--- ADD POSTS ---</h1>

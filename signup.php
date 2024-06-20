@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             margin: 0;
         }
         .welcome-container {
-            margin-bottom: 20px;
+            margin-bottom: -30px;
             text-align: center;
         }
         .welcome-container h1 {
@@ -85,11 +85,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             color: red;
             text-align: center;
         }
+        .image-container {
+            /* width: 80%; */
+            /* height: 80%; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: none;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .image-container img {
+            width: 50%;
+        }
     </style>
 </head>
 <body>
     <div class="welcome-container">
         <h1>Welcome to Bon Appétit Blog</h1>
+    </div>
+    <div class="image-container">
+        <img src="logo.png" alt="Descriptive Alt Text">
     </div>
     <div class="signup-container">
         <?php if (isset($error)) : ?>

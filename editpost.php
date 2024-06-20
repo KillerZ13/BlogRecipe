@@ -71,10 +71,18 @@ mysqli_close($conn);
 <head>
     <title>Php Blog</title>
     <?php require('inc/header.php'); ?>
+    <style>
+        .navbar .user {
+            color: #9A6735;
+        }
+        .jumbotron.bg-dark {
+            background-color: #9A6735 !important;
+        }
+    </style>
 </head>
 <body>
     <?php require('inc/navbar.php'); ?>
-    <div class="container-fluid" style="background-color: burlywood; padding: 20px; height: 100vh;">
+    <div class="container-fluid" style="background-color:#C1E899; padding: 20px; height: 100vh;">
         <div class="jumbotron bg-dark" style="max-width: 450px; padding: 20px; color: ghostwhite; margin: auto;">
             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'] . '?id=' . $id); ?>" method="post">
                 <h1 class="text-center">--- EDIT BLOG ---</h1>

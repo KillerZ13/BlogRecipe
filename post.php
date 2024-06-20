@@ -75,10 +75,18 @@ mysqli_close($conn);
     <meta charset="UTF-8">
     <title>PHP Blog</title>
     <?php require('inc/header.php'); ?>
+    <style>
+        .navbar .user {
+            color: #9A6735;
+        }
+        .jumbotron.bg-dark {
+            background-color: #9A6735 !important;
+        }
+    </style>
 </head>
 <body>
     <?php require('inc/navbar.php'); ?>
-    <div class="container-fluid" style="background-color:burlywood; padding:20px; height:100vh">
+    <div class="container-fluid" style="background-color:#C1E899; padding:20px; height:100vh">
         <div class="container">
             <?php if ($post): ?>
                 <!-- Single Post View -->

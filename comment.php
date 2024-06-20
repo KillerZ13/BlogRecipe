@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #deb887  ; /* Light yellow background */
+            background-color: #C1E899  ; /* Light yellow background */
             color: #333; /* Dark text color */
             padding: 20px;
         }
@@ -67,27 +67,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             margin: 0 auto;
         }
         h2 {
-            color: #900C3F; /* Dark pink heading color */
+            color: #9A6735;
         }
         .form-group {
             margin-bottom: 1rem;
         }
         label {
-            color: #900C3F; /* Dark pink label color */
+            color: #9A6735; 
             font-weight: bold;
         }
         .form-control {
-            width: 100%;
+            width: 97%;
             padding: 8px;
             font-size: 1rem;
             border: 1px solid #ccc;
             border-radius: 4px;
         }
         textarea.form-control {
-            height: 120px; /* Adjust height for textarea */
+            height: 100px; /* Adjust height for textarea */
         }
         .btn-primary {
-            background-color: #900C3F; /* Dark pink button background */
+            background-color: #9A6735; /* Dark pink button background */
             color: #fff; /* White text color */
             border: none;
             padding: 10px 20px;
@@ -112,28 +112,54 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             border-color: #F5C6CB; /* Error alert border color */
             color: #721C24; /* Error alert text color */
         }
+        .welcome-container {
+            margin-bottom: -30px;
+            text-align: center;
+        }
+        .welcome-container h1 {
+            color: white;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: none;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .image-container img {
+            width: 30%;
+        }
     </style>
 </head>
 <body>
-<div class="container">
-        <h2>Add a Comment</h2>
-        <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" class="form-control" value="<?php echo htmlspecialchars($name); ?>">
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" class="form-control" value="<?php echo htmlspecialchars($email); ?>">
-            </div>
-            <div class="form-group">
-                <label for="comment">Comment:</label>
-                <textarea id="comment" name="comment" class="form-control"><?php echo htmlspecialchars($comment); ?></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-        <br>
-        <a href="index.php" class="btn btn-primary">back</a>
+<div class="welcome-container">
+        <h1>Welcome to Bon Appétit Blog</h1>
     </div>
+    <div class="image-container">
+        <img src="logo.png" alt="Descriptive Alt Text">
+    </div>
+<div class="container">
+    <h2>Add a Comment</h2>
+    <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" class="form-control" value="<?php echo htmlspecialchars($name); ?>">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" class="form-control" value="<?php echo htmlspecialchars($email); ?>">
+        </div>
+        <div class="form-group">
+            <label for="comment">Comment:</label>
+            <textarea id="comment" name="comment" class="form-control"><?php echo htmlspecialchars($comment); ?></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a href="index.php" class="btn btn-primary">Back</a>
+    </form>
+    <br>
+</div>
+
+    
 </body>
 </html>
