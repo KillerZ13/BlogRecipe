@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Set session variables
         $_SESSION['username'] = $username;
         // Redirect to index page
-        header('Location: index.php');
+        header('Location: dashboard.php');
         exit();
     } else {
         $error = "Invalid username or password";

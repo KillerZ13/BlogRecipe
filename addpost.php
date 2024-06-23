@@ -23,7 +23,7 @@ if(isset($_POST['submit'])){
     $query = "INSERT INTO post(title, author, body, image, category_id) VALUES ('$title', '$author', '$body', '$image', '$category_id')";
 
     if(mysqli_query($conn, $query)){
-        header("Location: index.php");
+        header("Location: dashboard.php");
     } else {
         echo "ERROR: ".mysqli_error($conn);
     }
@@ -65,7 +65,7 @@ $categories = mysqli_fetch_all($categories_result, MYSQLI_ASSOC);
                 </div>
 
                 <div class="form-group">
-                    <label>Body</label>
+                    <label>Ingredients</label>
                     <textarea rows="5" type="text" name="body" class="form-control" style="max-width:400px"></textarea>
                 </div>
 
@@ -88,7 +88,7 @@ $categories = mysqli_fetch_all($categories_result, MYSQLI_ASSOC);
                         <input type="submit" value="submit" name="submit" class="btn btn-alert btn-md">
                     </div>
                     <div class='col-4 text-center'>
-                        <a href="index.php"><button type="button" class="btn btn-alert">back</button></a>
+                        <a href="dashboard.php"><button type="button" class="btn btn-alert">back</button></a>
                     </div>
                 </div>
             </form>

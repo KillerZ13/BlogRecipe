@@ -95,7 +95,7 @@ mysqli_close($conn);
                     <input type="text" name="author" class="form-control" style="max-width: 400px" value="<?php echo htmlspecialchars($post['author']); ?>">
                 </div>
                 <div class="form-group">
-                    <label>Body</label>
+                    <label>Ingredients</label>
                     <textarea rows="5" type="text" name="body" class="form-control" style="max-width: 400px"><?php echo htmlspecialchars($post['body']); ?></textarea>
                 </div>
                 <div class="form-group">

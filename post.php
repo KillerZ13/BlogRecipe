@@ -105,7 +105,15 @@ mysqli_close($conn);
                     <?php if (!empty($post['image'])): ?>
                         <img src="<?php echo htmlspecialchars($post['image']); ?>" alt="Post Image" style="width:100%; height:auto;">
                     <?php endif; ?>
-                    <h3>"<?php echo htmlspecialchars($post['body']); ?>"</h3>
+                    <h7>
+                    <ul>
+                        <?php 
+                            $body_points = explode("\n", $post['body']);
+                            foreach ($body_points as $point): ?>
+                                <li><?php echo htmlspecialchars(trim($point)); ?></li>
+                        <?php endforeach; ?>
+                    </ul>
+                    </h7>
                     <br><br>
                     <p class="text-right" style="font-size:1.2vw">
                         Category: <span style="color:yellow"><?php echo htmlspecialchars($post['category_name']); ?></span><br>

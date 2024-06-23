@@ -155,7 +155,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <textarea id="comment" name="comment" class="form-control"><?php echo htmlspecialchars($comment); ?></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
-        <a href="index.php" class="btn btn-primary">Back</a>
+        <a href="dashboard.php" class="btn btn-primary">Back</a>
     </form>
     <br>
 </div>
